@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 
 export const userAPI = createApi({
     reducerPath: "userAPI",
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8800/api"}),
+    baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_PUBLIC_API_URL}),
     tagTypes: ['User'],
     endpoints: (build) => ({
         getWatchListOfUser: build.query({
