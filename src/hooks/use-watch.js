@@ -9,8 +9,8 @@ import {
 const useWatch = ({ productId, currentUser }) => {
 
     const { data: watchList } = useGetWatchListOfUserQuery(currentUser.email);
-    const [addToWatchList, {error: addToWatchListError, isLoading: addToWatchListLoading}] = useAddToWatchListMutation()
-    const [removeFromWatchList, {error: removeFromWatchListError, isLoading: removeFromListLoading}] = useRemoveFromWatchListMutation()
+    const [addToWatchList] = useAddToWatchListMutation()
+    const [removeFromWatchList] = useRemoveFromWatchListMutation()
 
     const hasFavorited = useMemo(() => {
         const list = watchList || [];

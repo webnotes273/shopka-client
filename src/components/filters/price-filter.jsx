@@ -1,12 +1,11 @@
 "use client";
 
-import {useCallback, useMemo, useState} from "react";
+import {useState} from "react";
 import MultiRangeSlider from "multi-range-slider-react";
 import {useLocation, useNavigate} from "react-router-dom";
 import qsString from "query-string";
 
 import "./filters.css"
-import {debounce} from "debounce";
 
 
 const PriceFilter = () => {

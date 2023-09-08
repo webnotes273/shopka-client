@@ -1,4 +1,4 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 import {setupListeners} from "@reduxjs/toolkit/query";
 import {productAPI} from "./services/ProductService";
 import {userAPI} from "./services/UserService";

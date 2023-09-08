@@ -48,7 +48,7 @@ const Navbar = () => {
                     <div className="flex items-center overflow-hidden w-[120px] h-[42px]">
                         <img
                             src="/images/logo.png"
-                            alt="Logo image"
+                            alt="Logo previe"
                             className="object-cover object-center"
                         />
                     </div>
@@ -127,7 +127,7 @@ const Navbar = () => {
                     <div className="overflow-hidden rounded-full w-10 h-10">
                         <img
                             src="/images/avatar.png"
-                            alt="Avatar image"
+                            alt="Avatar preview"
                             className="object-cover object-center"
                         />
                     </div>
