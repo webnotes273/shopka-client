@@ -34,7 +34,7 @@ const Navbar = () => {
 
     }, 500);
 
-    const handleClose = (event) => {
+    const handleClose = () => {
         setItems([]);
         setSearch("")
         inputRef.current.value = ""
