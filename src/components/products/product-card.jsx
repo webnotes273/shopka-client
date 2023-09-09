@@ -8,7 +8,6 @@ const ProductCard = ({
     product,
     currentUser
 }) => {
-
     const { hasFavorited, toggleFavorite } = useWatch({productId: product.id, currentUser: currentUser});
 
     return (

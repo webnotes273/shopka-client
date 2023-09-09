@@ -1,15 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProductCard from "../components/products/product-card";
 import PriceFilter from "../components/filters/price-filter";
 import { useFetchAllProductsQuery } from "../store/services/ProductService";
 import Preloader from "../components/ui/preloader/Preloader";
-import {useLocation} from "react-router-dom";
 import NoResults from "../components/ui/no-results";
 
 const Home = () => {
-    console.log('home')
-    const { search } = useLocation();
+    // const { search } = useLocation();
     // Let's assume that we have user authentication
+    const [search, setSearch] = useState("");
     const fakeCurrentUser = {
         id: 1,
         name: "Anton",
@@ -25,7 +24,7 @@ const Home = () => {
                 <div className="pt-20">
                     <p className="mb-3 text-lg font-bold">Price Range Selected</p>
                     <div className="border-2 border-[#EDEDF0] p-2">
-                        <PriceFilter />
+                        <PriceFilter setSearch={setSearch} />
                     </div>
                 </div>
 

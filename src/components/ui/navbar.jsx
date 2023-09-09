@@ -26,6 +26,7 @@ const Navbar = () => {
         setIsSearching(true);
         if (event.target.value === "") {
             setItems([]);
+            setIsSearching(false)
             return;
         }
         setSearch(event.target.value);
@@ -38,6 +39,7 @@ const Navbar = () => {
         setItems([]);
         setSearch("")
         inputRef.current.value = ""
+        setIsSearching(false)
     }
 
     return (
@@ -85,7 +87,7 @@ const Navbar = () => {
                                 <AiOutlineClose className="text-[#2979FF]"/>
                             </button>
 
-                            {isSearching ? "Search" : null}
+                            {isSearching ? "Search..." : null}
 
                             {items.length > 0
                                 ?
